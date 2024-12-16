@@ -15,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><StyledJsxRegistry><GluestackUIProvider mode="light">{children}</GluestackUIProvider></StyledJsxRegistry></body>
+      <body>
+        <StyledJsxRegistry>
+          <GluestackUIProvider mode="light">{children}</GluestackUIProvider>
+        </StyledJsxRegistry>
+      </body>
     </html>
   );
 }
