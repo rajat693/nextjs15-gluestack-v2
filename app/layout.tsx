@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import StyledJsxRegistry from "./registry";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><StyledJsxRegistry><GluestackUIProvider mode="light">{children}</GluestackUIProvider></StyledJsxRegistry></body>
     </html>
   );
 }
